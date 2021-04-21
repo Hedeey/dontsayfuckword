@@ -27,6 +27,7 @@ bot.on("message", async message =>{
     }
 
     if (foundInText) {
+        message.channel.bulkDelete(1)
         const user = message.author.id;
         const embed = new Discord.MessageEmbed()
         .setColor('#FF0000')
